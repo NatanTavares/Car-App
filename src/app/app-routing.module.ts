@@ -4,16 +4,36 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'login', // build a landing page after
     pathMatch: 'full'
-  },
-  {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
     path: 'cadastrar-usuario',
     loadChildren: () => import('./cadastrar-usuario/cadastrar-usuario.module').then( m => m.CadastrarUsuarioPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'cadastrar-carro',
+    loadChildren: () => import('./cadastrar-carro/cadastrar-carro.module').then( m => m.CadastrarCarroPageModule)
+  },
+  {
+    path: 'carro',
+    loadChildren: () => import('./carro/carro.module').then( m => m.CarroPageModule)
+  },
+  {
+    path: 'lista-carros',
+    loadChildren: () => import('./lista-carros/lista-carros.module').then( m => m.ListaCarrosPageModule)
+  },
+  {
+    path: 'calcular-litros',
+    loadChildren: () => import('./calcular-litros/calcular-litros.module').then( m => m.CalcularLitrosPageModule)
   }
 ];
 
