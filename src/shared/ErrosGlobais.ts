@@ -13,7 +13,11 @@ export class ErrosGlobais implements ErrorHandler {
 
   handleError(error: any): void {
     // throw new Error('Method not implemented.');
-    console.log(error);
+    if (error instanceof Error) {
+      const er: Error = error;
+      console.log('> er.message:', er.message);
+      this.mostrarErro(er.message);
+    }
   }
 
   async mostrarErro(msg: string) {
