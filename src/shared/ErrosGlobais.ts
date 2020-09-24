@@ -16,12 +16,11 @@ export class ErrosGlobais implements ErrorHandler {
     console.log(error);
   }
 
-  async presentAlert() {
+  async mostrarErro(msg: string) {
     const alert = await this._alert.create({
-      cssClass: 'my-custom-class',
-      header: 'Alert',
-      subHeader: 'Subtitle',
-      message: 'This is an alert message.',
+      cssClass: 'alert-padrao',
+      header: 'Atenção',
+      message: msg,
       buttons: ['OK']
     });
 
