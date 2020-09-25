@@ -9,6 +9,7 @@ import { LoginService } from 'src/services/LoginService';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage implements OnInit {
   public login: Login = new Login;
 
@@ -20,7 +21,9 @@ export class LoginPage implements OnInit {
 
   onLogin() {
     console.log('> This.login:', this.login);
-    this._loginService.login(this.login);
+    this._loginService.login(this.login).subscribe(res => {
+      console.log(res);
+    });
   }
 
   onCadastro() {
