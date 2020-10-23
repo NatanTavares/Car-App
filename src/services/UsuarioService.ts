@@ -20,14 +20,16 @@ export class UsuarioService implements IUsuarioService {
 
         throw new Error("You can to salve.");
     }
+
     atualizar(usuario: Usuario): Observable<Usuario> {
         throw new Error("Method not implemented.");
     }
+    
     logar(usuario: Usuario): void {
         throw new Error("Method not implemented.");
     }
+    
     retornarUsuarioLogado(): Usuario {
         throw new Error("Method not implemented.");
     }
-
 }

@@ -16,7 +16,6 @@ export class ErrosGlobais implements ErrorHandler {
     // throw new Error('Method not implemented.');
     if (error instanceof Error) {
       const er: Error = error;
-      console.log('> er.message:', er.message);
       this.mostrarErro(er.message);
     }
 
@@ -32,7 +31,7 @@ export class ErrosGlobais implements ErrorHandler {
           msg = "Serviço não autorizado.";
           break;
         default:
-          msg = "Serviço indisponível";
+          msg = er.error;
       }
       
       this.mostrarErro(msg);
